@@ -28,8 +28,88 @@
             font-size: xx-large;
             text-align: center;
         }
+        .letrero2 {
+            position: absolute;
+            left: 50%;
+            top: 85%;
+            transform: translate(-50%, -50%);
+            color: white;
+            font-weight: bolder;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-size: xx-large;
+            text-align: center;
+        }
     </style>
     <img class="logo" src="Logo_blanco.png" alt="" srcset="">
     <p class="letrero">¡Próximamente nuestro nuevo sitio web!</p>
+    <p class="letrero2" id="qr"></p>
+    <script>
+        let final = ''
+        document.addEventListener("keypress", function(event) {
+            let expr = event.keyCode
+            switch (expr) {
+                case 97:
+                    final = final + 'a'
+                break;
+                case 98:
+                final = final + 'b'
+                break;
+                case 99:
+                final = final + 'c'
+                break;
+                case 100:
+                final = final + 'd'
+                break;
+                case 101:
+                final = final + 'e'
+                break;
+                case 102:
+                final = final + 'f'
+                break;
+                case 45:
+                final = final + '-'
+                break;
+                case 48:
+                final = final + '0'
+                break;
+                case 49:
+                final = final + '1'
+                break;
+                case 50:
+                final = final + '2'
+                break;
+                case 51:
+                final = final + '3'
+                break;
+                case 52:
+                final = final + '4'
+                break;
+                case 53:
+                final = final + '5'
+                break;
+                case 54:
+                final = final + '6'
+                break;
+                case 55:
+                final = final + '7'
+                break;
+                case 56:
+                final = final + '8'
+                break;
+                case 57:
+                final = final + '9'
+                break;
+            }
+            let contador = final.length
+            if(final.length == 36){
+                let letrero = document.getElementById("qr")
+                letrero.innerHTML = final
+                final = ''
+            }
+            
+            console.log({final})
+            console.log({contador})
+        });
+    </script>
 </body>
 </html>
